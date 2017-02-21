@@ -1,18 +1,8 @@
- /* //button insert evento
-    $("#btnInsertEv").click(function() {
-		/*$.ajax({
-			url: 'hello.php',
-			success: function (response){//response is value returned from php (for your example it's "bye bye"
-			alert(response);
-			}
-		});
-        
-    });*/
 	$(document).ready(function() {
 
 	// button get evento
     $("#btnGetEv").click(function() {
-		$.getJSON("insertEv.php",function(res) {
+		$.getJSON("getEv.php",function(res) {
             if (res) {
                 var table=$('<table class="table"><tbody></tbody></table>');
                 table.append('<thead><tr><th>Titolo</th><th>Data</th><th>Categoria</th><th>nickname</th><th>Provincia</th></tr></thead>');
@@ -26,4 +16,33 @@
         });
 		
     });
-	});
+	// button insert evento
+    $("#btnInsertEv").click(function() {
+	
+				var ajaxSubmit = function(formEl) {
+                // fetch where we want to submit the form to
+                var url = $(formEl).attr('action');
+
+                // fetch the data for the form
+                var data = $(formEl).serializeArray();
+
+                // setup the ajax request
+                $.ajax({
+                    url: 'insertEv.php',
+                    data: data,
+                    dataType: 'json',
+                    success: function() {
+                        if(rsp.success) {
+                            alert('form has been posted successfully');
+                        }
+                    }
+                });
+
+                // return false so the form does not actually
+                // submit to the page
+                return false;
+            
+            }
+        });
+		
+    });

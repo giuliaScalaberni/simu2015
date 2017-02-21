@@ -13,31 +13,30 @@
 	<body>
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<form>
+			<form method="get" action="insertEv.php" onSubmit="return ajaxSubmit(this);">
 				<div class="form-group">
 					<label>Nickname</label>
-					<input type="text" class="form-control" id="nick" placeholder="nickname">
+					<input type="text" class="form-control" name="nick" placeholder="nickname">
 				</div>
 				<div class="form-group">
 					<label>Titolo evento</label>
-					<input type="text" class="form-control" id="tit" placeholder="titolo">
+					<input type="text" class="form-control" name="tit" placeholder="titolo">
 				</div>
 				<div class="form-group">
 					<label>Provincia</label>
-					<input type="text" class="form-control" id="prov" placeholder="provincia">
+					<input type="text" class="form-control" name="prov" placeholder="provincia">
 				</div>
 				<div class="form-group">
 					<label>Data</label>
-					<input type="text" class="form-control" id="date" placeholder="data">
+					<input type="text" class="form-control" name="date" placeholder="data">
 				</div>
 				<div class="form-group">
 					<label>Categoria</label>
-					<input type="text" class="form-control" id="cat" placeholder="categoria">
+					<input type="text" class="form-control" name="cat" placeholder="categoria">
 				</div>
 				<button class="btn btn-primary" id="btnInsertEv">Inserisci</button>
 			</form>
 			<div class="panel-body">
-				
 			</div>
 		</div>
 		<div class="col-md-4"><br><button class="btn btn-danger" id="btnGetEv">Get</button><div id="contentEventi"></div></div>
