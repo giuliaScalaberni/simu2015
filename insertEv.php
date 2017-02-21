@@ -9,15 +9,15 @@
 	
 	//insert into mysql table
 	$stm=$connect->prepare('INSERT INTO eventi (titolo, provincia, data, idCat, nickname) VALUES (:titolo,:provincia,:date,:idCat, :nickname)');
-			$stm->bindValue(':titolo',$_GET['tit']);
-			$stm->bindValue(':provincia',$_GET['prov']);
-			$stm->bindValue(':date',$_GET['date']);
-			$stm->bindValue(':idCat',$_GET['cat']);
-			$stm->bindValue(':nickname',$_GET['nick']);
-			if ($stm->execute()){
-				echo 'ok';
-			}
-			else
-				echo 'error';
+			$stm->bindValue(':titolo',$_POST['tit']);
+			$stm->bindValue(':provincia',$_POST['prov']);
+			$stm->bindValue(':date',$_POST['date']);
+			$stm->bindValue(':idCat',$_POST['cat']);
+			$stm->bindValue(':nickname',$_POST['nick']);
+			$stm->execute();
+			/*$stmt = $connect->prepare("SELECT * FROM eventi");
+			if ($stmt->execute()) {
+				echo json_encode($stmt->fetchAll());*/
+    
 	
 ?>

@@ -32,9 +32,7 @@
                     data: data,
                     dataType: 'json',
                     success: function() {
-                        if(rsp.success) {
-                            alert('form has been posted successfully');
-                        }
+                        
                     }
                 });
 
