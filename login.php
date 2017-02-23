@@ -19,7 +19,7 @@ try{
 			if ($row> 0) {
 				$_SESSION['log']='ok';
 				$_SESSION['nick']=$_GET['nick'];
-				print json_encode($_SESSION);
+				echo json_encode($_SESSION);
 			}
 			else{echo 'error row';}
 		}
