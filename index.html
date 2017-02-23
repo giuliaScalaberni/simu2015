@@ -13,7 +13,7 @@
 	    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-		<link rel="stylesheet" href="/resources/demos/style.css">
+		<!--link rel="stylesheet" href="/resources/demos/style.css"-->
 	</head>
 	<body>
 		<div class="col-md-4"></div>
@@ -21,24 +21,23 @@
 			<form method="post" action="insertEv.php" onSubmit="return ajaxSubmit(this);">
 				<div class="form-group">
 					<label>Nickname</label>
-					<input type="text" class="form-control" name="nick" placeholder="nickname">
+					<input type="text" class="form-control" name="nick" placeholder="nickname"required>
 				</div>
 				<div class="form-group">
 					<label>Titolo evento</label>
-					<input type="text" class="form-control" name="tit" placeholder="titolo">
+					<input type="text" class="form-control" name="tit" placeholder="titolo"required>
 				</div>
 				<div class="form-group">
 					<label>Provincia</label>
-					<input type="text" class="form-control" name="prov" placeholder="provincia">
-				</div>
-				<div class="form-group">
-					<label>Data</label>
-					Date: <input type="text"  name="date" id="datepicker">
-					<!--input type="text" class="form-control" name="date" placeholder="data"-->
+					<input type="text" class="form-control" name="prov" placeholder="provincia"required>
 				</div>
 				<div class="form-group">
 					<label>Categoria</label>
-					<input type="text" class="form-control" name="cat" placeholder="categoria">
+					<input type="text" class="form-control" name="cat" placeholder="categoria"required>
+				</div>
+				<div class="form-group">
+					<label>Data</label>
+					<input type="text"  name="date" id="datepicker"required>
 				</div>
 				<button class="btn btn-primary" id="btnInsertEv">Inserisci</button>
 			</form>

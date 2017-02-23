@@ -48,4 +48,32 @@
             }
         });
 		
+		// button login
+    $("#btnLogin").click(function() {
+	
+				var ajaxSubmit = function(formEl) {
+                // fetch where we want to submit the form to
+                var url = $(formEl).attr('action');
+
+                // fetch the data for the form
+                var data = $(formEl).serializeArray();
+
+                // setup the ajax request
+                $.ajax({
+                    url: 'login.php',
+                    data: data,
+                    dataType: 'json',
+                    success: function(response) {
+						alert(response[0]);
+						
+                    }
+                });
+
+                // return false so the form does not actually
+                // submit to the page
+                return false;
+            
+            }
+        });
+		
     });
