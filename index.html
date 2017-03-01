@@ -18,7 +18,7 @@
 	<body>
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<form method="post" action="insertEv.php" onSubmit="return ajaxSubmit(this);">
+			<form id="formEv" method="post" action="" >
 				<div class="form-group">
 					<label>Nickname</label>
 					<input type="text" class="form-control" name="nick" placeholder="nickname"required>
@@ -41,7 +41,7 @@
 				</div>
 				<button class="btn btn-primary" id="btnInsertEv">Inserisci</button>
 			</form>
-			<div class="panel-body">
+			<div id="insertEv">
 			</div>
 		</div>
 		<div class="col-md-4"><br><button class="btn btn-danger" id="btnGetEv">Get</button><div id="contentEventi"></div></div>

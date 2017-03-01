@@ -1,7 +1,7 @@
 <?php
 	try{
-		//$connect=new PDO('mysql:dbname=quintaa_simu;localhost','root','miomio');
-		$connect = new PDO('mysql:dbname=quintaa_simu;localhost','quintaa','NB7U@91A');
+		$connect=new PDO('mysql:dbname=quintaa_simu;localhost','root','miomio');
+		//$connect = new PDO('mysql:dbname=quintaa_simu;localhost','quintaa','NB7U@91A');
 	}
 	catch(PDOException $e){
 		echo 'CONNECTION FAILED: '.$e->getMessage();
@@ -15,9 +15,8 @@
 			$stm->bindValue(':idCat',$_POST['cat']);
 			$stm->bindValue(':nickname',$_POST['nick']);
 			$stm->execute();
-			/*$stmt = $connect->prepare("SELECT * FROM eventi");
-			if ($stmt->execute()) {
-				echo json_encode($stmt->fetchAll());*/
+			echo json_encode($_POST);
+    
     
 	
 ?>
